@@ -24,7 +24,7 @@ function Footer() {
             
           </li>
         </ul>
-        <p>&copy; 2023 Computer Engineer Danubio</p>
+        &copy; 2023 Computer Engineer Danubio
 
     </footer>
   );

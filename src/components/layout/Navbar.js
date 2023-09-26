@@ -9,6 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import './Navbar.modules.css';
+import CardsAsh from '../pages/CardsAsh';
 
 
 function NavBar() {
@@ -39,9 +40,9 @@ function NavBar() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">
-              Link
-            </Nav.Link>
+            <Link to="/CardsAsh" className="nav-link" element={<CardsAsh/>}>
+              Cards
+            </Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
