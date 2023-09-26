@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router} from 'react-router-dom';
 import { Routes} from 'react-router-dom';
@@ -9,13 +9,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Footer from './components/layout/Footer';
+import Container from './components/layout/Container';
 
 function App() {
   return (
     
     <Router>
       <NavBar />
-
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route path='/About' element={<About/>}/>

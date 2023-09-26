@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import './Navbar.module.css';
+import './Navbar.modules.css';
 
 
 function NavBar() {

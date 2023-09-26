@@ -1,12 +1,18 @@
 import React from "react";
-
+import anime from "../img/anime.png";
+import "./Home.modules.css";
 function Home() {
   return (
-    <div>
-      <p>Esse é o home</p>
-      <img src="../../../public/img/1695727850598-image.png" alt="Descrição da imagem" width="200px" height="200px" />
-    </div>
-  )
+    <>
+      <div className="mylittlepony">
+      <img className="anime"
+          src={anime}
+          alt="Descrição da imagem"
+          
+        />
+      </div>
+    </>
+  );
 }
 
 export default Home;

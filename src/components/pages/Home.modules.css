@@ -1,0 +1,26 @@
+.rainbowdash{
+    background-image: url("../img/rainbowdash.jpg");
+    background-size:auto; /* Redimensiona a imagem para cobrir todo o elemento */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center center;
+}
+/* Estilos para a imagem de fundo (mylittlepony) */
+.mylittlepony {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/mylittlepony.jpg");
+    background-size: cover; /* Redimensiona a imagem para cobrir toda a janela */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center center;
+    background-attachment: fixed; /* Fixa a imagem de fundo na janela */
+  }
+.anime{
+    
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: auto;
+}

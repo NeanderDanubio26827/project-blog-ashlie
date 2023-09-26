@@ -1,0 +1,38 @@
+/* Estilos para o footer */
+/* Estilos para o footer */
+.social_footer {
+  position: absolute; /* Fixa o footer */
+  bottom: 0; /* Fixa o footer na parte inferior da janela do navegador */
+  left: 0; /* Opcional: para alinhar à esquerda */
+  right: 0; /* Opcional: para alinhar à direita */
+  margin: 0 auto; /* Centraliza o elemento horizontalmente */
+  background-color: #eb83ba;
+  color: antiquewhite;
+  padding: 1em; /* Ajuste o espaço interno conforme necessário */
+  text-align: center;
+}
+
+  
+  
+  /* Estilos para a lista de ícones sociais */
+  .social_list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social_list li {
+    margin: 0 1em;
+  }
+  
+  .social_list li a {
+    text-decoration: none;
+    color: antiquewhite;
+  }
+  
+  .social_list li a:hover {
+    font-size: 1.5em;
+    color: rgb(239, 10, 36);
+  }
+  

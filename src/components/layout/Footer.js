@@ -1,13 +1,31 @@
 import React from 'react';
-import {FaFacebook, FaInstragram, FaLinkedin} from 'react-icons/fa'
-import styles from './Footer.module.css'
-
+import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
+import './Footer.modules.css'
+//import {footer, social_list} from './Footer.modules.css';
 function Footer() {
   return (
-    <footer className="bg-pink text-light text-center py-3">
-      <div className="container">
-        <p>&copy; 2023 Seu Nome</p>
-      </div>
+    <footer className="social_footer">
+        <ul className="social_list">
+          <li>
+            <a href='#'>
+            <FaFacebook/>
+            </a>
+            
+          </li>
+          <li>
+            <a href='#'>
+            <FaInstagram/>
+            </a>  
+          </li>
+          <li>
+            <a href='#'>
+            <FaLinkedin/>
+            </a>
+            
+          </li>
+        </ul>
+        <p>&copy; 2023 Computer Engineer Danubio</p>
+
     </footer>
   );
 }

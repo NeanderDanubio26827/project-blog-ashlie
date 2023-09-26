@@ -1,0 +1,11 @@
+/* custom-styles.css */
+.custom-pink {
+  position: relative;
+  /* Certifica-se de que a navbar tenha uma posição relativa */
+  z-index: 3;
+  /* Aumenta o z-index da navbar para garantir que ela esteja acima da imagem de fundo */
+
+  background-color: #eb83ba;
+  /* Esta é uma cor rosa forte */
+  /* Você pode ajustar a cor conforme necessário */
+}
