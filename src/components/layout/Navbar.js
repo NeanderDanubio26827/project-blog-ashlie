@@ -35,7 +35,7 @@ function NavBar() {
               Sobre mim
             </Link>
             <NavDropdown title="Posts" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Posts</NavDropdown.Item>
+              <NavDropdown.Item >Posts</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 <Link to="/Posts" className="nav-link" element={<Posts />}>
                   Posts

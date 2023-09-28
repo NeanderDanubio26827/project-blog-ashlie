@@ -8,7 +8,7 @@ import "./About.modules.css";
 function PostForm() {
   return (
     <div className="mylittlepony2 d-flex justify-content-center align-items-center">
-      <Card className="card-ash" style={{ width: "600px", height: "400px" }}>
+      <Card className="card-ash" style={{ width: "600px", height: "400px", backgroundColor: "#eb83ff" }}>
         <Card.Body>
           <Form.Group controlId="postTitle" className="mb-3">
             <Form.Label style={{ width: "500px" }}>Título do Post</Form.Label>
