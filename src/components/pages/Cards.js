@@ -5,6 +5,8 @@ import Row from 'react-bootstrap/Row';
 import avatar from "../img/avatar.png";
 import ashpaint from "../img/ashliepaint.png";
 import anime from "../img/anime.png";
+import Button from 'react-bootstrap/Button';
+import './Card.modules.css';
 
 function Cards() {
   // Defina um array de objetos com informações das imagens e cards
@@ -31,7 +33,7 @@ function Cards() {
     <Row xs={1} md={2} lg={3} className="g-4">
       {cardsData.map((card, idx) => (
         <Col key={idx}>
-          <Card>
+          <Card className="card-ash">
             <Card.Img variant="top" src={card.imgSrc} width="150px" height="150px" />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
@@ -39,6 +41,7 @@ function Cards() {
                 {card.text}
               </Card.Text>
             </Card.Body>
+            <Button variant="outline-warning" size="sm" >Veja</Button>{' '}
           </Card>
         </Col>
       ))}
