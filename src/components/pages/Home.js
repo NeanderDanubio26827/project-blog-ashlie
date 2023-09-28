@@ -7,11 +7,7 @@ function Home() {
   return (
     <>
       <div className="mylittlepony">
-      <img className="anime"
-          src={anime}
-          alt="Descrição da imagem"
-          
-        />
+      
       
       </div>
     </>

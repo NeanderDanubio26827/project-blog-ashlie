@@ -1,7 +1,7 @@
 /* Estilos para o footer */
 /* Estilos para o footer */
 .social_footer {
-  position: absolute; /* Fixa o footer */
+  position: fixed; /* Fixa o footer */
   bottom: 0; /* Fixa o footer na parte inferior da janela do navegador */
   left: 0; /* Opcional: para alinhar à esquerda */
   right: 0; /* Opcional: para alinhar à direita */
