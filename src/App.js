@@ -14,6 +14,7 @@ import CardsAsh from "./components/pages/Cards";
 import Posts from "./components/pages/Posts";
 import PostForm from "./components/pages/PostForm";
 import Cards from "./components/pages/Cards";
+import SendPost from "./components/pages/SendPost";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Cards" element={<Cards />} />
         <Route path="/Posts" element={<Posts />} />
         <Route path="/PostForm" element={<PostForm />} />
+        <Route path="/Send" element={<SendPost />} />
       </Routes>
 
       <Footer />
