@@ -12,6 +12,7 @@ import "./Navbar.modules.css";
 import CardsAsh from "../pages/Cards";
 import Posts from "../pages/Posts";
 import Cards from "../pages/Cards";
+import PostForm from "../pages/PostForm";
 
 function NavBar() {
   return (
@@ -33,7 +34,7 @@ function NavBar() {
             <Link to="/About" className="nav-link" element={<About />}>
               Sobre mim
             </Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
+            <NavDropdown title="Posts" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Posts</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
                 <Link to="/Posts" className="nav-link" element={<Posts />}>
@@ -42,7 +43,9 @@ function NavBar() {
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                <Link to="/PostForm" className="nav-link" element={<PostForm />}>
+                  Novo post
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
             <Link to="/Cards" className="nav-link" element={<Cards />}>
