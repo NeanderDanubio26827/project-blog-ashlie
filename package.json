@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend": "nodemon ../api/app.js",
+    "backend": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
