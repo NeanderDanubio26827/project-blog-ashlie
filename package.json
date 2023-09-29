@@ -10,6 +10,7 @@
     "express": "^4.18.2",
     "express-generator": "^4.16.1",
     "node-modules": "^1.0.1",
+    "nodemon": "^3.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start": "node app.js",
+    "backend": "nodemon app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
