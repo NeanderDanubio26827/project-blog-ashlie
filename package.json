@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend": "node ../components/api/app.js",
+    "backend": "node ../components/api/public/posts.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
