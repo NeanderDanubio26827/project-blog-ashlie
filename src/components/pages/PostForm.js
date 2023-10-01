@@ -29,7 +29,7 @@ function PostForm() {
     };
 
     // Enviar os dados para a sua API usando o método POST
-    fetch("http://localhost:4000/createPost", {
+    fetch("https://myapi-blog.vercel.app/insertPost/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,11 +83,7 @@ function PostForm() {
             />
           </Form.Group>
 
-          <Button
-            variant="outline-success"
-            type="submit"
-            onClick={handleSubmit}
-          >
+          <Button variant="outline-success" type="submit" onClick={handleSubmit}>
             Enviar
           </Button>
         </Card.Body>
