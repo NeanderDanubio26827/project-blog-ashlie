@@ -10,8 +10,8 @@ import { response } from "express";
 
 function PostForm() {
   const [formData, setFormData] = useState({
-    "title": "",
-    "text": "",
+    title: "",
+    text: "",
   });
 
   const handleInputChange = (e) => {
@@ -23,14 +23,13 @@ function PostForm() {
   };
 
   const handleSubmit = async (e) => {
-    // Tornar a função assíncrona
     e.preventDefault();
 
     const newPost = {
-      "title": formData.title,
-      "text": formData.text,
+      title: formData.title,
+      text: formData.text,
     };
-    
+
     try {
       const response = await fetch(
         "https://myapi-blog.vercel.app/insertPost/",
@@ -41,10 +40,7 @@ function PostForm() {
           },
           body: JSON.stringify(newPost),
         }
-      ).then((response) => response.json())
-      .then(formData => {
-        setFormData(formData);
-      });
+      );
 
       if (response.ok) {
         alert("Dados enviados com sucesso para a API.");
@@ -54,12 +50,8 @@ function PostForm() {
         });
       } else {
         alert("Erro ao enviar dados para a API.");
-        setFormData({
-          title: "",
-          text: "",
-        });
       }
-    }catch (error) {
+    } catch (error) {
       console.error("Erro ao enviar a solicitação POST:", error);
     }
   };
