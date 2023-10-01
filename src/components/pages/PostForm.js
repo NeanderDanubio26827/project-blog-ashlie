@@ -95,7 +95,7 @@ function PostForm() {
             type="submit"
             onClick={handleSubmit}
           >
-            <Link to="/PostForm" className="nav-link" element={<Home />}>
+            <Link to="/" className="nav-link" element={<Home />}>
               Enviar
             </Link>
           </Button>
