@@ -30,6 +30,7 @@ function PostForm() {
       text: formData.text,
     };
 
+    let newPostP = JSON.stringify(newPost) 
     try {
       const response = await fetch(
         "https://myapi-blog.vercel.app/insertPost/",
@@ -38,7 +39,7 @@ function PostForm() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(newPost),
+          body: newPostP, 
         }
       );
 
