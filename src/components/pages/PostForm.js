@@ -6,6 +6,7 @@ import "./Card.modules.css";
 import "./About.modules.css";
 import Home from "./Home";
 import { Link } from "react-router-dom";
+import { response } from "express";
 
 function PostForm() {
   const [formData, setFormData] = useState({
@@ -40,7 +41,10 @@ function PostForm() {
           },
           body: JSON.stringify(newPost),
         }
-      );
+      ).then((response) => response.json())
+      .then(formData => {
+        setFormData(formData);
+      });
 
       if (response.ok) {
         alert("Dados enviados com sucesso para a API.");
@@ -55,7 +59,7 @@ function PostForm() {
           text: "",
         });
       }
-    } catch (error) {
+    }catch (error) {
       console.error("Erro ao enviar a solicitação POST:", error);
     }
   };
