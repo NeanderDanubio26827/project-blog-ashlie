@@ -19,7 +19,7 @@ function PostForm() {
     });
   };
 
-  const handleSubmit = async (e) => { // Adicione a palavra-chave async aqui
+  const handleSubmit = async (e) => {
     e.preventDefault();
   
     // Criar um novo objeto com os dados do formulário
@@ -38,7 +38,8 @@ function PostForm() {
         body: JSON.stringify(newPost),
       });
   
-      if (response.ok) {
+      if (response.status >= 200 && response.status < 300) {
+        // Código de status de sucesso (2xx)
         alert("Dados enviados com sucesso para a API.");
         // Limpar o formulário ou fazer qualquer outra ação necessária
         setFormData({
@@ -46,12 +47,14 @@ function PostForm() {
           text: "",
         });
       } else {
-        alert("Erro ao enviar dados para a API.");
+        // Código de status de erro
+        alert("Erro ao enviar dados para a API. Código de status: " + response.status);
       }
     } catch (error) {
       console.error("Erro ao enviar a solicitação POST:", error);
     }
   };
+  
 
   return (
     <div className="mylittlepony2 d-flex justify-content-center align-items-center">
