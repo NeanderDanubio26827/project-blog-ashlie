@@ -9,7 +9,7 @@ function Posts() {
     const fetchData = async () => {
       try {
         // Fazer a solicitação GET à sua API
-        const response = await fetch("http://localhost:4000/selectPost/", {
+        const response = await fetch("https://myapi-blog.vercel.app/selectPost/", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

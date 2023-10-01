@@ -29,7 +29,7 @@ function PostForm() {
     };
 
     // Enviar os dados para a sua API usando o método POST
-    fetch("http://localhost:4000/insertPost/", {
+    fetch("https://myapi-blog.vercel.app/insertPost/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
