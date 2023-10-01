@@ -83,7 +83,11 @@ function PostForm() {
             />
           </Form.Group>
 
-          <Button variant="outline-success" type="submit" onClick={handleSubmit}>
+          <Button
+            variant="outline-success"
+            type="submit"
+            onClick={handleSubmit}
+          >
             Enviar
           </Button>
         </Card.Body>
