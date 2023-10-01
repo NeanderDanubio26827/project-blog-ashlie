@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 function PostForm() {
   const [formData, setFormData] = useState({
-    title: "",
-    text: "",
+    "title": "",
+    "text": "",
   });
 
   const handleInputChange = (e) => {
@@ -26,11 +26,10 @@ function PostForm() {
     e.preventDefault();
 
     const newPost = {
-      title: formData.title,
-      text: formData.text,
+      "title": formData.title,
+      "text": formData.text,
     };
-
-    let newPostP = JSON.stringify(newPost) 
+    
     try {
       const response = await fetch(
         "https://myapi-blog.vercel.app/insertPost/",
@@ -39,7 +38,7 @@ function PostForm() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: newPostP, 
+          body: JSON.stringify(newPost),
         }
       );
 
