@@ -50,6 +50,10 @@ function PostForm() {
         });
       } else {
         alert("Erro ao enviar dados para a API.");
+        setFormData({
+          title: "",
+          text: "",
+        });
       }
     } catch (error) {
       console.error("Erro ao enviar a solicitação POST:", error);
