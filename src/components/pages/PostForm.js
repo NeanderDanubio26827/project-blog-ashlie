@@ -19,38 +19,38 @@ function PostForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => { // Adicione a palavra-chave async aqui
     e.preventDefault();
-
+  
     // Criar um novo objeto com os dados do formulário
     const newPost = {
       title: formData.title,
       text: formData.text,
     };
-
-    // Enviar os dados para a sua API usando o método POST
-    fetch("https://myapi-blog.vercel.app/insertPost/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newPost),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Dados enviados com sucesso para a API.");
-          // Limpar o formulário ou fazer qualquer outra ação necessária
-          setFormData({
-            title: "",
-            text: "",
-          });
-        } else {
-          alert("Erro ao enviar dados para a API.");
-        }
-      })
-      .catch((error) => {
-        console.error("Erro ao enviar a solicitação POST:", error);
+  
+    try {
+      // Enviar os dados para a sua API usando o método POST
+      const response = await fetch("https://myapi-blog.vercel.app/insertPost/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newPost),
       });
+  
+      if (response.ok) {
+        alert("Dados enviados com sucesso para a API.");
+        // Limpar o formulário ou fazer qualquer outra ação necessária
+        setFormData({
+          title: "",
+          text: "",
+        });
+      } else {
+        alert("Erro ao enviar dados para a API.");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar a solicitação POST:", error);
+    }
   };
 
   return (
