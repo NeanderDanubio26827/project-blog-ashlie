@@ -70,7 +70,7 @@ function PostForm() {
               placeholder="Digite o título do post"
               name="title"
               value={formData.title}
-              onChange={handleInputChange}
+              onChange={ handleInputChange }
             />
           </Form.Group>
 
