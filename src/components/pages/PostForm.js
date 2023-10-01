@@ -21,7 +21,8 @@ function PostForm() {
     });
   };
 
-  const handleSubmit = async (e) => { // Tornar a função assíncrona
+  const handleSubmit = async (e) => {
+    // Tornar a função assíncrona
     e.preventDefault();
 
     const newPost = {
@@ -30,13 +31,16 @@ function PostForm() {
     };
 
     try {
-      const response = await fetch("https://myapi-blog.vercel.app/insertPost/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newPost),
-      });
+      const response = await fetch(
+        "https://myapi-blog.vercel.app/insertPost/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newPost),
+        }
+      );
 
       if (response.ok) {
         alert("Dados enviados com sucesso para a API.");
@@ -82,8 +86,14 @@ function PostForm() {
             />
           </Form.Group>
 
-          <Button variant="outline-success" type="submit" onClick={handleSubmit}>
-            Enviar
+          <Button
+            variant="outline-success"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            <Link to="/PostForm" className="nav-link" element={<Home />}>
+              Enviar
+            </Link>
           </Button>
         </Card.Body>
       </Card>
