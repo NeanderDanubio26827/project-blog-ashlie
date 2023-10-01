@@ -4,9 +4,6 @@ import Button from "react-bootstrap/Button";
 import { Card } from "react-bootstrap";
 import "./Card.modules.css";
 import "./About.modules.css";
-import Home from "./Home";
-import { Link } from "react-router-dom";
-import { response } from "express";
 
 function PostForm() {
   const [formData, setFormData] = useState({
@@ -22,38 +19,38 @@ function PostForm() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Criar um novo objeto com os dados do formulário
     const newPost = {
       title: formData.title,
       text: formData.text,
     };
 
-    try {
-      const response = await fetch(
-        "https://myapi-blog.vercel.app/insertPost/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newPost),
+    // Enviar os dados para a sua API usando o método POST
+    fetch("http://localhost:4000/createPost", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPost),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Dados enviados com sucesso para a API.");
+          // Limpar o formulário ou fazer qualquer outra ação necessária
+          setFormData({
+            title: "",
+            text: "",
+          });
+        } else {
+          alert("Erro ao enviar dados para a API.");
         }
-      );
-
-      if (response.ok) {
-        alert("Dados enviados com sucesso para a API.");
-        setFormData({
-          title: "",
-          text: "",
-        });
-      } else {
-        alert("Erro ao enviar dados para a API.");
-      }
-    } catch (error) {
-      console.error("Erro ao enviar a solicitação POST:", error);
-    }
+      })
+      .catch((error) => {
+        console.error("Erro ao enviar a solicitação POST:", error);
+      });
   };
 
   return (
@@ -70,7 +67,7 @@ function PostForm() {
               placeholder="Digite o título do post"
               name="title"
               value={formData.title}
-              onChange={ handleInputChange }
+              onChange={handleInputChange}
             />
           </Form.Group>
 
@@ -86,11 +83,7 @@ function PostForm() {
             />
           </Form.Group>
 
-          <Button
-            variant="outline-success"
-            type="submit"
-            onClick={handleSubmit}
-          >
+          <Button variant="outline-success" type="submit" onClick={handleSubmit}>
             Enviar
           </Button>
         </Card.Body>
